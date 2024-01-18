@@ -3,10 +3,8 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  DropdownItem,
   DropdownTrigger,
   Dropdown,
-  DropdownMenu,
   Avatar,
   Input,
 } from "@nextui-org/react";
@@ -19,6 +17,7 @@ import { IoNotifications } from "react-icons/io5";
 import avatar from "../../assets/icon/user/avatar.png";
 import { IoPersonAdd } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
+import DropdownMenuItems from "./DropdownMenuItems";
 
 const NavBar = () => {
   const menuItems = (
@@ -58,9 +57,9 @@ const NavBar = () => {
 
   return (
     <div>
-      <Navbar className="w-full max-w-7xl mx-auto">
-        <NavbarBrand>
-          <img src={logo} alt="" className="w-[50%] lg:w-[12%]" />
+      <Navbar className="w-full flex justify-between mx-auto">
+        <NavbarBrand className="gap-4">
+          <img src={logo} alt="" className="w-[20%] lg:w-[12%] -m-6 justify-start" />
           {/* search field */}
           <Input
             classNames={{
@@ -115,13 +114,8 @@ const NavBar = () => {
                 src={avatar}
               />
             </DropdownTrigger>
-            <DropdownMenu aria-label="Profile Actions" variant="flat">
-              <DropdownItem key="settings">Settings & privacy</DropdownItem>
-              <DropdownItem key="team_settings">Help & support</DropdownItem>
-              <DropdownItem key="logout" color="danger">
-                Log Out
-              </DropdownItem>
-            </DropdownMenu>
+            {/* DropdownMenuItems */}
+            <DropdownMenuItems/>
           </Dropdown>
         </NavbarContent>
       </Navbar>
