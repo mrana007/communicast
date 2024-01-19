@@ -1,0 +1,130 @@
+.register{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    background: white;
+    box-shadow: 0 1px 2px rgb(104, 104, 104);
+    border-radius: 10px;
+    padding: 15px;
+    padding-bottom: 1rem;
+    width: 350px;
+    height: fit-content;
+}
+
+.register_header{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--blue-color);
+}
+
+.register_header i{
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+
+.register_header span:first-of-type{
+    font-weight: 700;
+    font-size: 32px;
+}
+.register_header span:last-of-type{
+    font-size: 15px;
+    color: var(--common);
+}
+
+
+.regi_line{
+    margin: 15px 0;
+}
+.regi_line input{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid var(--common);
+}
+
+.register_form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reg_col{
+    position: relative;
+    align-self: flex-start;
+    margin-bottom: 10px;
+    padding: 0 10px;
+}
+
+.reg_line_header{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-size: 13px;
+    color: var(--common);
+}
+.reg_grid{
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    height: 35px;
+    width: 100%;
+}
+.reg_grid select{
+    width: 90px;
+    border: 1px solid var(--common);
+    border-radius: 5px;
+    font-size: 16px;
+    color: var(--common);
+}
+
+.reg_grid label{
+    width: 90px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-size: 16px;
+    color: var(--common);
+    gap: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 0 10px;
+    accent-color: var(--primary);
+}
+
+.register_btn_wrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.sign_up{
+    background: var(--primary);
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.sign_up:hover{
+    opacity: 70%;
+    transition: ease-in-out .2s;
+}
+.effect:active{
+    transform: translateY(4px);
+}
+
+.regi_line input:focus{
+    outline-color: var(--common);
+}
